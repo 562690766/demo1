@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        h1 {
+            color: #eee;
+            font-size: 30px;
+        }
+        .left {
+            width: 33%; 
+            background-color: blue; 
+            height: 100px;
+        }
+        .right {
+            width: 33%; 
+            background-color: green; 
+            height: 100px;
+        }
+        .main {
+            flex:1;
+            /* width: 33%;  */
+            background-color: red; 
+            height: 100px;
+        }
+
+
+        .container{
+            display: flex;
+            border: 1px solid #000;
+            /* 跳青蛙可以实现红色在中间，不用改样式 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="main"></div> -->
+        <div class="left"></div>
+        <div class="main"></div>
+        <div class="right"></div>
+    </div>
+    <script>
+        console.log('hello world!')</script>
+</body>
+</html>

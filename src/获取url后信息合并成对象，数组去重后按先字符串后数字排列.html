@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let httpUrlStr='https://www.whatever.com?a=1&b={a=1;b:2,c:[1,2,3]}';
+        // function getUrlParams(url){
+        //     let params=url.split('?')[1];
+        //     console.log(params);
+        //     let param=params.split('&');
+        // 	console.log(param);
+        //     let obj={};
+        // 	for (let i=0;i<param.length;i++){
+        // 		// 通过split,=继续对数组params每一项进行分割,生成数组["name", "itclanCoder"]
+        // 		let paramsA=param[i].split('=');
+        // 		// 取数组项["name", "itclanCoder"]中第0位,即name
+        // 		let key=paramsA[0];
+        // 		// 取数组项["name", "itclanCoder"]中第1位,即itclanCoder
+        // 		let value=paramsA[1];
+        // 		obj[key]=value;
+        // 	}
+        // 	return obj;
+        // }
+        // console.log(getUrlParams(httpUrlStr));
+
+
+        // let url = 'www.baidu.com?a=1&b={a:1,b:2,c:[1,2,3]}';
+        // let result = {};
+        // let params = url.split('?')[1].split('&');
+        // console.log(params);
+
+        // params.forEach(param => {
+        //     let arr = param.split('=');
+        //     console.log(arr);
+        //     // 可以将json字符串转换成json对象,注意需要在json字符外包裹一对小括号 
+        //     result[arr[0]] = eval('(' + arr[1] + ')');
+        // });
+        // console.log(result);
+        // {a:1,b:{a:1,b:2,c:[1,2,3]}}
+
+
+
+        // var arr="121122acdf4"
+        // var solt=[...new Set(arr)]
+        // console.log(solt);
+
+        // var bianli =solt.forEach(item=>{
+        //     const arr1=[];
+        //     if(item instanceof Array){
+        //         console.log("123123")
+        //         return arr1.push(item);
+        //     }
+        // console.log(item instanceof Array)
+        // // console.log(arr1)
+        // })
+        // console.log(bianli)
+
+
+
+        // function sortStr(s) {
+        //     let set = new Set()
+        //     // 用空格隔开，
+        //     let arr0 = s.split('')
+        //     console.log(arr0)// ['1', '2', '1', '1', '2', '2', 'a', 'c', 'd', 'f', '4']
+        //     // 对数组进行排序
+        //     let arr= arr0.sort()
+        //     console.log(arr)//['1', '1', '1', '2', '2', '2', '4', 'a', 'c', 'd', 'f']
+
+        //     let letter = []
+        //     let number = []
+        //     arr.forEach(item => {
+        //         // 数字字符编码charCodeAt是48~57
+        //         if (item.charCodeAt(0) >= 48 && item.charCodeAt(0) <= 57) {
+        //             number.push(item)
+        //         } else {
+        //             letter.push(item)
+        //         }
+        //     })
+        //     set = [...new Set(letter.concat(number))]
+        //     return set
+        // }
+        // console.log(sortStr('121122acdf4'))
+
+// 变成【‘a','1','2'】
+
+
+let httpUrlStr='https://www.whatever.com?a=1&b=2';
+        function getUrlParams(url){
+            let params=url.split('?')[1];
+            console.log(params);
+            let param=params.split('&');
+        	console.log(param);
+            let obj={};
+            
+        	for (let i=0;i<param.length;i++){
+        // 		// 通过split,=继续对数组params每一项进行分割,生成数组["name", "itclanCoder"]
+        		let paramsA=param[i].split('=');
+        // 		// 取数组项["name", "itclanCoder"]中第0位,即name
+        		let key=paramsA[i];
+        // 		// 取数组项["name", "itclanCoder"]中第1位,即itclanCoder
+        		let value=paramsA[1];
+        		obj[key]=value;
+        	}
+        	return obj;
+        }
+        console.log(getUrlParams(httpUrlStr));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
